@@ -20,9 +20,6 @@ def all():
 
 @app.route('/create', methods=['GET', 'POST'])
 def create():
-    if 'username' not in session:
-        return redirect(url_for('login'))
-
     if request.method == 'GET':
         return render_template('create.jinja2')
 
